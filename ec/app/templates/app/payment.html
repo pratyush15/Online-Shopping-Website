@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}   
+{% load static %}    
+{% block title %}Payment{% endblock title %}        
+{% block payment-content %}   
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <form class="bg-light p-5" action="/continued">  
+          <h2 class="text-center mb-4">Enter card Details</h2> 
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" placeholder="Card Number" maxlength = "16"/> 
+            <label for="text">Card Number</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" placeholder="CVV" maxlength = "3"/>         
+            <label for="password">CVV</label> 
+          </div> 
+           <button class="btn btn-primary" type="submit">Submit</button>   
+        </form>
+      </div>
+    </div>
+</div> 
+{% endblock payment-content %}  
